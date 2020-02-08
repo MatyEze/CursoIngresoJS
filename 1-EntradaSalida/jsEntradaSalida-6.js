@@ -8,14 +8,14 @@ function sumar()
     var numeroB;
     var resultado;
 
-    numeroA = document.getElementById("numeroUno").value;
-    numeroB = document.getElementById("numeroDos").value;
-    numeroA = parseInt(numeroA);
-    numeroB = parseInt(numeroB);
+    numeroA = parseInt (document.getElementById("numeroUno").value);
+    numeroB = parseInt (document.getElementById("numeroDos").value);
+    //numeroA = parseInt(numeroA);
+    //numeroB = parseInt(numeroB);
 
 
     resultado = numeroA + numeroB;
-    alert(`el resultado de la suma es ${resultado}`);
+    alert("el resultado de la suma es " + resultado);
 
     
 }

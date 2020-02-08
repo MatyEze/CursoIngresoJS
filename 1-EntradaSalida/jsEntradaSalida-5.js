@@ -8,7 +8,7 @@ function mostrar()
     nombre = document.getElementById("elNombre").value;
     edad = document.getElementById("laEdad").value;
     
-    alert(`su nombre es ${nombre} y tiene ${edad} años`);
+    alert("su nombre es " + nombre + " y tiene " + edad + " años ");
 
     
 }

@@ -7,9 +7,9 @@ function mostrarAumento()
     var importe;
     
     importe = document.getElementById("importe").value;
-    importe = parseInt(importe);
+    importe = parseFloat(importe);
 
     importe = importe * 0.75;
 
-    document.getElementById("resultado").value = importe;
+    document.getElementById("resultado").value = importe.toFixed(2);
 }
