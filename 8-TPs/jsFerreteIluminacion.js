@@ -77,7 +77,7 @@ function CalcularPrecio() {
             imp = precio * 0.1;
             precio = precio + imp;
             document.getElementById("precioDescuento").value = precio.toFixed(2);
-            alert("IIBB Usted pago $" + precio + " , siendo $" + imp + " el impuesto que se pagó.")
+            alert("IIBB Usted pago $" + precio.toFixed(2) + " , siendo $" + imp.toFixed(2) + " el impuesto que se pagó.")
 
         } else {
             document.getElementById("precioDescuento").value = precio.toFixed(2);

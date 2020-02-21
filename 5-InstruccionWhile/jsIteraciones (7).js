@@ -24,7 +24,7 @@ function mostrar() {
 		document.getElementById("promedio").value = num;
 	} else {
 		document.getElementById("suma").value = res;
-		document.getElementById("promedio").value = (res / i).toFixed(2);
+		document.getElementById("promedio").value = parseFloat((res / i).toFixed(2));
 	}
 
 
