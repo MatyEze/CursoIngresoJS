@@ -3,7 +3,7 @@ function mostrar() {
     var sexo = prompt("ingrese f ó m .");
 
     while (sexo != "f" && sexo != "m") {
-        sexo = prompt("ingrese f ó m .");
+        sexo = prompt("Dato no valido, ingrese f ó m (en minuscula).");
     }
 
     if (sexo == "m") {
@@ -15,4 +15,4 @@ function mostrar() {
 
     document.getElementById('Sexo').value = sexo;
 
-}//FIN DE LA FUNCIÓN
+} //FIN DE LA FUNCIÓN

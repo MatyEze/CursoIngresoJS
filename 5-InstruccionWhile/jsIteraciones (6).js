@@ -10,8 +10,8 @@ function mostrar() {
 	}
 
 	document.getElementById("suma").value = res;
-	document.getElementById("promedio").value = res/5;
+	document.getElementById("promedio").value = res / i;
 
 
 
-}//FIN DE LA FUNCIÓN
+} //FIN DE LA FUNCIÓN
