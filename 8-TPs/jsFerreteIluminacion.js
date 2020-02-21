@@ -8,7 +8,85 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
-{
- 	
+function CalcularPrecio() {
+
+    var cant = parseInt(document.getElementById("Cantidad").value);
+    var marca = document.getElementById("Marca").value;
+    var precio = 35 * cant;
+    var imp;
+
+    if (cant >= 3) {
+
+        if (marca == "ArgentinaLuz") {
+            switch (cant) {
+
+                case 3:
+                    precio = precio - (precio * 0.15);
+                    break;
+                case 4:
+                    precio = precio - (precio * 0.25);
+                    break;
+                case 5:
+                    precio = precio - (precio * 0.4);
+                    break;
+
+                default:
+                    precio = precio - (precio * 0.5);
+                    break;
+            }
+        } else if (marca == "FelipeLamparas") {
+
+            switch (cant) {
+
+                case 3:
+                    precio = precio - (precio * 0.1);
+                    break;
+                case 4:
+                    precio = precio - (precio * 0.25);
+                    break;
+                case 5:
+                    precio = precio - (precio * 0.3);
+                    break;
+
+                default:
+                    precio = precio - (precio * 0.5);
+                    break;
+            }
+        } else {
+
+            switch (cant) {
+
+                case 3:
+                    precio = precio - (precio * 0.05);
+                    break;
+                case 4:
+                    precio = precio - (precio * 0.20);
+                    break;
+                case 5:
+                    precio = precio - (precio * 0.3);
+                    break;
+
+                default:
+                    precio = precio - (precio * 0.5);
+                    break;
+            }
+        }
+
+        if (precio > 120) {
+
+            imp = precio * 0.1;
+            precio = precio + imp;
+            document.getElementById("precioDescuento").value = precio.toFixed(2);
+            alert("IIBB Usted pago $" + precio + " , siendo $" + imp + " el impuesto que se pagó.")
+
+        } else {
+            document.getElementById("precioDescuento").value = precio.toFixed(2);
+        }
+
+
+
+    } else {
+        alert("Son menos de 3 por lo que no se aplica ningun descuento")
+    }
+
 }
