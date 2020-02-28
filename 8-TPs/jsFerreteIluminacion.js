@@ -12,7 +12,7 @@ function CalcularPrecio() {
 
     var cant = parseInt(document.getElementById("Cantidad").value);
     var marca = document.getElementById("Marca").value;
-    var precio = 35 * cant;
+    var precio = 35
     var imp;
 
     if (cant >= 3) {
@@ -72,15 +72,15 @@ function CalcularPrecio() {
             }
         }
 
-        if (precio > 120) {
+        if (precio * cant > 120) {
 
-            imp = precio * 0.1;
-            precio = precio + imp;
+            imp = (precio * cant) * 0.1;
             document.getElementById("precioDescuento").value = precio.toFixed(2);
-            alert("IIBB Usted pago $" + precio.toFixed(2) + " , siendo $" + imp.toFixed(2) + " el impuesto que se pagó.")
+            alert("IIBB Usted pago $" + ((precio * cant) + imp).toFixed(2) + " , siendo $" + imp.toFixed(2) + " el impuesto que se pagó.")
 
         } else {
             document.getElementById("precioDescuento").value = precio.toFixed(2);
+            alert("El total de la compra es : $" + precio * cant);
         }
 
 
